@@ -15,7 +15,9 @@ class ArtistController extends Controller
     {
         //
         $artists = Artist::with('band')->latest()->simplePaginate(3);
-        return view('artists.index');
+        return view('home.index',[
+            'artists' => $artists
+        ]);
     }
 
     /**

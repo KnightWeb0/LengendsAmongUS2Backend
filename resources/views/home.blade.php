@@ -16,6 +16,23 @@ Welcome
 </x-slot:heading>
 
 
+<div class="grid grid-cols-6 justify-center gap-7">
+
+<x-card/>
+<x-card/>
+<x-card/>
+<x-card/>
+<x-card/>
+<x-card/>
+<x-card/>
+<x-card/>
+<x-card/>
+<x-card/>
+<x-card/>
+<x-card/>
+
+</div>
+
 
 
 
