@@ -14,8 +14,8 @@ class ArtistController extends Controller
     public function index()
     {
         //
-        $artists = Artist::with('band')->latest()->simplePaginate(3);
-        return view('home.index',[
+        $artists = Artist::with('band')->latest()->simplePaginate(5);
+        return view('home',[
             'artists' => $artists
         ]);
     }
@@ -33,7 +33,7 @@ class ArtistController extends Controller
      */
     public function store(StoreArtistRequest $request)
     {
-        //
+
     }
 
     /**
@@ -42,6 +42,7 @@ class ArtistController extends Controller
     public function show(Artist $artist)
     {
         //
+        return view('artists.show', ['artist' =>$artist]);
     }
 
     /**

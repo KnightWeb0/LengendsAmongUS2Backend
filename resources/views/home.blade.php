@@ -17,22 +17,19 @@ Welcome
 
 
 <div class="grid grid-cols-6 justify-center gap-7">
+@foreach ($artists as $artist)
 
-<x-card/>
-<x-card/>
-<x-card/>
-<x-card/>
-<x-card/>
-<x-card/>
-<x-card/>
-<x-card/>
-<x-card/>
-<x-card/>
-<x-card/>
-<x-card/>
+{{-- {{$artist}} --}}
+<x-card :artist="$artist"/>
+
+
+@endforeach
+
 
 </div>
-
+<div class="pt-5">
+    {{$artists->links()}}
+</div>
 
 
 
